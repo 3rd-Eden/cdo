@@ -1,0 +1,11 @@
+node_modules/
+coverage/
+.nyc_output/
+*.log
+.fixtures/
+cdo-profile.json
+cdo-profile.previous.json
+STYLEGUIDE.cdo.md
+cdo-apply-report.json
+cdo-iteration-report.json
+.cdo/
