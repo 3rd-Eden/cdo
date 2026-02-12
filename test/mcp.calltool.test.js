@@ -46,6 +46,7 @@ test('callCdoTool executes all MCP tool paths', async () => {
   });
   const parsedConfigs = JSON.parse(configs.content[0].text);
   await access(parsedConfigs.biome.configPath);
+  await access(parsedConfigs.agents.agentsPath);
 
   const applied = await callCdoTool('cdo.apply_style', {
     profilePath,

@@ -187,7 +187,5 @@ test('snapshot fixtures for learn/config/apply/report output remain stable', asy
   await assertSnapshot('grit-rules.grit', await readFile(configs.grit.rulesPath, 'utf8'));
   await assertSnapshot('grit-recipes.json', await readFile(configs.grit.recipesPath, 'utf8'));
   await assertSnapshot('oxfmt.json', configs.oxc ? await readFile(configs.oxc.configPath, 'utf8') : '');
-  await assertSnapshot('agent-codex.md', await readFile(configs.agents.codexPath, 'utf8'));
-  await assertSnapshot('agent-cursor.mdc', await readFile(configs.agents.cursorPath, 'utf8'));
-  await assertSnapshot('agent-claude.md', await readFile(configs.agents.claudePath, 'utf8'));
+  await assertSnapshot('AGENTS.md', await readFile(configs.agents.agentsPath, 'utf8'));
 });

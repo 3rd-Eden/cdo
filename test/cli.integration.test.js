@@ -39,6 +39,7 @@ test('cli learn/guide/config/apply flows end-to-end', async () => {
 
   await runNode(['./src/cli.js', 'config', '--profile', profilePath, '--out-dir', configDir], ROOT);
   await access(path.join(configDir, 'biome.json'));
+  await access(path.join(tmp, 'AGENTS.md'));
 
   const apply = await runNode(
     ['./src/cli.js', 'apply', '--profile', profilePath, '--repos', repo, '--report', reportPath],

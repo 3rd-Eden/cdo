@@ -4,7 +4,7 @@ CDO learns coding style from one or more JavaScript/TypeScript repositories and 
 
 - humans (`STYLEGUIDE.cdo.md`)
 - tooling (`biome.json` + Grit assets)
-- coding agents (Codex/Cursor/Claude templates)
+- coding agents via root `AGENTS.md` ([agents.md](https://agents.md/))
 
 The goal is simple: infer how an author actually writes code, then reuse that style safely in other repos.
 
@@ -51,9 +51,7 @@ A standard run produces:
 - `grit/README.md`
 - `grit/recipes.json`
 - `oxfmt.json` (optional compatibility artifact)
-- `agents/CODEX.md`
-- `agents/CURSOR.mdc`
-- `agents/CLAUDE.md`
+- `AGENTS.md` (root-level, [agents.md](https://agents.md/) format)
 
 4. apply/report artifacts
 - `cdo-apply-report.json`
@@ -67,10 +65,11 @@ CDO v1 infers these rule families:
 - line comment spacing: `//comment` vs `// comment`
 - function JSDoc tendency
 - comment block framing: framed (`//` blank top/bottom) vs plain
-- trailing inline assignment comment alignment (`a = 1; // note` column behavior)
+- trailing inline comment alignment (`//` column behavior on assignments/object members/array entries/function lines)
 
 2. Naming
 - function name word count tendency: single-word vs multi-word
+- function expression naming tendency: named vs anonymous
 
 3. Control flow
 - one-statement `if` style: braces omitted vs required
@@ -80,7 +79,9 @@ CDO v1 infers these rule families:
 - quote style: single vs double
 - semicolon usage: always vs never
 - trailing comma usage: multiline vs never
+- variable declaration comma placement: leading vs trailing
 - yoda conditions: `if (3 === value)` vs `if (value === 3)`
+- multiline ternary operator placement: leading (`?`/`:` at line start) vs trailing
 - preferred JS line width (for formatter wrapping behavior)
 
 5. Whitespace/layout
@@ -100,6 +101,7 @@ CDO v1 infers these rule families:
 Important extraction notes:
 
 - directive/separator comments are excluded from comment-spacing inference (`//# sourceMappingURL`, `// eslint-disable...`, divider lines)
+- trailing inline comment alignment detection is gap-tolerant within the same block to preserve aligned comment columns
 - one-line `if` brace rule only considers true one-statement single-line `if` forms
 - `switch` `break` indentation only counts direct `break;` statements in `case` blocks
 - member-expression indentation uses dot-leading continuation lines and file-level majority voting
