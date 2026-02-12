@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cdo.dev/schema/cdo-profile.v1.schema.json",
+  "title": "CDO Profile v1",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "profileId",
+    "createdAt",
+    "author",
+    "sampleWindow",
+    "sources",
+    "rules",
+    "evidence",
+    "confidenceSummary",
+    "nonFixablePreferences"
+  ],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "profileId": { "type": "string", "minLength": 1 },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "author": {
+      "type": "object",
+      "required": ["mode", "emails"],
+      "properties": {
+        "mode": { "enum": ["single-author", "all-authors"] },
+        "emails": {
+          "type": "array",
+          "items": { "type": "string", "format": "email" }
+        }
+      },
+      "additionalProperties": false
+    },
+    "sampleWindow": {
+      "type": "object",
+      "required": ["maxFilesPerRepo", "perRepo"],
+      "properties": {
+        "maxFilesPerRepo": { "type": "integer", "minimum": 1 },
+        "perRepo": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["root", "fileCount", "sampledFiles"],
+            "properties": {
+              "root": { "type": "string" },
+              "fileCount": { "type": "integer", "minimum": 0 },
+              "sampledFiles": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "sources": {
+      "type": "object",
+      "required": ["roots", "filesAnalyzed"],
+      "properties": {
+        "roots": { "type": "array", "items": { "type": "string" } },
+        "filesAnalyzed": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "rules": {
+      "type": "object",
+      "required": ["comments", "naming", "controlFlow", "syntax", "whitespace", "imports"],
+      "additionalProperties": true
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": { "type": "number", "minimum": 0 }
+    },
+    "confidenceSummary": {
+      "type": "object",
+      "required": ["overall", "byRule"],
+      "properties": {
+        "overall": { "type": "number", "minimum": 0, "maximum": 1 },
+        "byRule": {
+          "type": "object",
+          "additionalProperties": { "type": "number", "minimum": 0, "maximum": 1 }
+        }
+      },
+      "additionalProperties": false
+    },
+    "nonFixablePreferences": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["rule", "reason"],
+        "properties": {
+          "rule": { "type": "string" },
+          "reason": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,36 @@
+{
+  "recipes": [
+    {
+      "id": "single-line-if-omit-braces",
+      "title": "Omit braces for one-statement if blocks",
+      "reason": "Profile prefers concise single-line if statements without braces.",
+      "mode": "rewrite",
+      "risk": "medium",
+      "snippet": "`if ($condition) { $statement }` => `if ($condition) $statement`"
+    },
+    {
+      "id": "prefer-guard-clauses",
+      "title": "Promote guard clauses",
+      "reason": "Profile tends to short-circuit early before main logic.",
+      "mode": "query",
+      "risk": "high",
+      "snippet": "`if ($condition) { $...body } else { $...rest }`"
+    },
+    {
+      "id": "single-word-function-name-candidates",
+      "title": "Flag likely multi-word function names",
+      "reason": "Profile prefers single-word naming for functions.",
+      "mode": "query",
+      "risk": "medium",
+      "snippet": "`function $name($...args) { $...body }` where $name <: r\"[_-]|[a-z][A-Z]\""
+    },
+    {
+      "id": "plain-line-comment-blocks",
+      "title": "Detect framed // comment blocks",
+      "reason": "Profile prefers plain comment groups without empty frame lines.",
+      "mode": "query",
+      "risk": "low",
+      "snippet": "`//\\n// $content\\n//`"
+    }
+  ]
+}

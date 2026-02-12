@@ -1,0 +1,15 @@
+### function-name-single-word.grit
+`function $name($...args) { $...body }` where {
+  $name <: r"[_-]|[a-z][A-Z]",
+  register_diagnostic(span = $name, message = "CDO profile prefers single-word function names.", severity = "warn")
+}
+
+### guard-clause-preference.grit
+`function $name($...args) { $first; $...rest }` where {
+  register_diagnostic(span = $name, message = "CDO profile prefers guard clauses at function start.", severity = "info")
+}
+
+### single-line-if-omit-braces.grit
+`if ($condition) { $statement }` where {
+  register_diagnostic(span = $statement, message = "CDO profile prefers omitting braces for single-line if statements.", severity = "warn")
+}

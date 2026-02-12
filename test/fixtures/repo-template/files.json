@@ -1,0 +1,14 @@
+[
+  {
+    "path": "src/primary.js",
+    "content": "import alpha from 'alpha';\nimport beta from 'beta';\n\n/**\n * Build value.\n */\nexport function build(value) {\n  // keep spacing\n  if (value) return alpha + beta;\n  return 'none';\n}\n"
+  },
+  {
+    "path": "src/secondary.ts",
+    "content": "/**\n * Format count.\n */\nexport function formatCount(input: number): string {\n  if (input > 0) return String(input);\n  return '0';\n}\n"
+  },
+  {
+    "path": "src/outlier.js",
+    "content": "export function weird() {\n\t//tight\n\tif (true) {\n\t\treturn \"ok\"\n\t}\n\treturn \"done\"\n}\n"
+  }
+]

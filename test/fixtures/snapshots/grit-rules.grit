@@ -1,0 +1,29 @@
+engine marzano(0.1)
+language js
+
+# Generated structural style recipes.
+# Review each recipe in dry-run mode before applying with writes.
+
+# recipe: cdo.single-line-if-omit-braces
+# mode: rewrite
+# risk: medium
+# reason: Profile prefers concise single-line if statements without braces.
+`if ($condition) { $statement }` => `if ($condition) $statement`
+
+# recipe: cdo.prefer-guard-clauses
+# mode: query
+# risk: high
+# reason: Profile tends to short-circuit early before main logic.
+`if ($condition) { $...body } else { $...rest }`
+
+# recipe: cdo.single-word-function-name-candidates
+# mode: query
+# risk: medium
+# reason: Profile prefers single-word naming for functions.
+`function $name($...args) { $...body }` where $name <: r"[_-]|[a-z][A-Z]"
+
+# recipe: cdo.plain-line-comment-blocks
+# mode: query
+# risk: low
+# reason: Profile prefers plain comment groups without empty frame lines.
+`//\n// $content\n//`

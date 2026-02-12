@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "cdo": {
+      "command": "cdo",
+      "args": ["mcp"]
+    }
+  }
+}

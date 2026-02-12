@@ -2,6 +2,7 @@ node_modules/
 coverage/
 .nyc_output/
 *.log
+.DS_Store
 .fixtures/
 cdo-profile.json
 cdo-profile.previous.json

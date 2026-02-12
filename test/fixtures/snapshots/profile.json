@@ -1,0 +1,326 @@
+{
+  "schemaVersion": "1.0.0",
+  "profileId": "<profile-id>",
+  "createdAt": "<created-at>",
+  "author": {
+    "mode": "single-author",
+    "emails": [
+      "snapshot@example.com"
+    ]
+  },
+  "sampleWindow": {
+    "maxFilesPerRepo": 200,
+    "perRepo": [
+      {
+        "root": "<repo>",
+        "fileCount": 3,
+        "sampledFiles": [
+          "<repo>/src/outlier.js",
+          "<repo>/src/primary.js",
+          "<repo>/src/secondary.ts"
+        ]
+      }
+    ]
+  },
+  "sources": {
+    "roots": [
+      "<repo>"
+    ],
+    "filesAnalyzed": 3
+  },
+  "rules": {
+    "comments": {
+      "lineCommentSpacing": {
+        "value": null,
+        "status": "undetermined",
+        "confidence": 0.5,
+        "evidenceCount": 1,
+        "provenance": "deterministic",
+        "autoFixSafe": true
+      },
+      "preferJsdocForFunctions": {
+        "value": null,
+        "status": "undetermined",
+        "confidence": 0,
+        "evidenceCount": 0,
+        "provenance": "deterministic",
+        "autoFixSafe": false
+      },
+      "commentBlockFraming": {
+        "value": "plain",
+        "status": "enforced",
+        "confidence": 1,
+        "evidenceCount": 2,
+        "provenance": "deterministic",
+        "autoFixSafe": false
+      },
+      "trailingInlineCommentAlignment": {
+        "value": null,
+        "status": "undetermined",
+        "confidence": 0,
+        "evidenceCount": 0,
+        "provenance": "deterministic",
+        "autoFixSafe": false
+      }
+    },
+    "naming": {
+      "functionWordCountPreference": {
+        "value": "single-word",
+        "status": "enforced",
+        "confidence": 0.6666666666666666,
+        "evidenceCount": 2,
+        "provenance": "deterministic",
+        "autoFixSafe": false
+      },
+      "functionExpressionNamingPreference": {
+        "value": null,
+        "status": "undetermined",
+        "confidence": 0,
+        "evidenceCount": 0,
+        "provenance": "deterministic",
+        "autoFixSafe": false
+      }
+    },
+    "controlFlow": {
+      "singleLineIfBraces": {
+        "value": "omit",
+        "status": "enforced",
+        "confidence": 1,
+        "evidenceCount": 2,
+        "provenance": "deterministic",
+        "autoFixSafe": false
+      },
+      "guardClauses": {
+        "value": "prefer",
+        "status": "enforced",
+        "confidence": 1,
+        "evidenceCount": 3,
+        "provenance": "deterministic",
+        "autoFixSafe": false
+      }
+    },
+    "syntax": {
+      "quotes": {
+        "value": "single",
+        "status": "enforced",
+        "confidence": 0.6666666666666666,
+        "evidenceCount": 4,
+        "provenance": "deterministic",
+        "autoFixSafe": false
+      },
+      "semicolons": {
+        "value": "always",
+        "status": "enforced",
+        "confidence": 0.75,
+        "evidenceCount": 6,
+        "provenance": "deterministic",
+        "autoFixSafe": false
+      },
+      "trailingCommas": {
+        "value": null,
+        "status": "undetermined",
+        "confidence": 0,
+        "evidenceCount": 0,
+        "provenance": "deterministic",
+        "autoFixSafe": false
+      },
+      "variableDeclarationCommaPlacement": {
+        "value": null,
+        "status": "undetermined",
+        "confidence": 0,
+        "evidenceCount": 0,
+        "provenance": "deterministic",
+        "autoFixSafe": false
+      },
+      "yodaConditions": {
+        "value": null,
+        "status": "undetermined",
+        "confidence": 1,
+        "evidenceCount": 1,
+        "provenance": "deterministic",
+        "autoFixSafe": false
+      },
+      "multilineTernaryOperatorPlacement": {
+        "value": null,
+        "status": "undetermined",
+        "confidence": 0,
+        "evidenceCount": 0,
+        "provenance": "deterministic",
+        "autoFixSafe": false
+      },
+      "lineWidth": {
+        "value": 80,
+        "status": "enforced",
+        "confidence": 0.65,
+        "evidenceCount": 24,
+        "provenance": "deterministic",
+        "autoFixSafe": false
+      }
+    },
+    "whitespace": {
+      "indentationKind": {
+        "value": "space",
+        "status": "enforced",
+        "confidence": 0.6428571428571429,
+        "evidenceCount": 9,
+        "provenance": "deterministic",
+        "autoFixSafe": true
+      },
+      "indentationSize": {
+        "value": 2,
+        "status": "enforced",
+        "confidence": 0.6428571428571429,
+        "evidenceCount": 9,
+        "provenance": "deterministic",
+        "autoFixSafe": true
+      },
+      "switchCaseIndentation": {
+        "value": null,
+        "status": "undetermined",
+        "confidence": 0,
+        "evidenceCount": 0,
+        "provenance": "deterministic",
+        "autoFixSafe": true
+      },
+      "switchCaseBreakIndentation": {
+        "value": null,
+        "status": "undetermined",
+        "confidence": 0,
+        "evidenceCount": 0,
+        "provenance": "deterministic",
+        "autoFixSafe": true
+      },
+      "memberExpressionIndentation": {
+        "value": null,
+        "status": "undetermined",
+        "confidence": 0,
+        "evidenceCount": 0,
+        "provenance": "deterministic",
+        "autoFixSafe": false
+      },
+      "multilineCallArgumentLayout": {
+        "value": null,
+        "status": "undetermined",
+        "confidence": 0,
+        "evidenceCount": 0,
+        "provenance": "deterministic",
+        "autoFixSafe": false
+      },
+      "blankLineDensity": {
+        "value": "compact",
+        "status": "enforced",
+        "confidence": 0.9771428571428571,
+        "evidenceCount": 28,
+        "provenance": "deterministic",
+        "autoFixSafe": false
+      },
+      "blankLineBeforeReturn": {
+        "value": "never",
+        "status": "enforced",
+        "confidence": 1,
+        "evidenceCount": 3,
+        "provenance": "deterministic",
+        "autoFixSafe": false
+      },
+      "blankLineBeforeIf": {
+        "value": "never",
+        "status": "enforced",
+        "confidence": 1,
+        "evidenceCount": 3,
+        "provenance": "deterministic",
+        "autoFixSafe": false
+      }
+    },
+    "imports": {
+      "ordering": {
+        "value": null,
+        "status": "undetermined",
+        "confidence": 1,
+        "evidenceCount": 1,
+        "provenance": "deterministic",
+        "autoFixSafe": false
+      }
+    }
+  },
+  "evidence": {
+    "lineComments": 2,
+    "functions": 0,
+    "functionNames": 3,
+    "functionExpressions": 0,
+    "ifStatements": 2,
+    "yodaComparisons": 1,
+    "multilineTernaries": 0,
+    "guardClauseFunctions": 3,
+    "commentBlocks": 2,
+    "trailingInlineCommentPairs": 0,
+    "strings": 6,
+    "semicolonStatements": 8,
+    "trailingCommaSites": 0,
+    "variableDeclarationCommaPlacements": 0,
+    "indentationLines": 14,
+    "blankLineBeforeReturnSites": 3,
+    "blankLineBeforeIfSites": 3,
+    "switchCaseLabels": 0,
+    "switchCaseBreaks": 0,
+    "memberExpressionChains": 0,
+    "multilineCalls": 0,
+    "maxLineLength": 52,
+    "importGroups": 1
+  },
+  "confidenceSummary": {
+    "overall": 0.49984761904761904,
+    "byRule": {
+      "comments.lineCommentSpacing": 0.5,
+      "comments.preferJsdocForFunctions": 0,
+      "comments.commentBlockFraming": 1,
+      "comments.trailingInlineCommentAlignment": 0,
+      "naming.functionWordCountPreference": 0.6666666666666666,
+      "naming.functionExpressionNamingPreference": 0,
+      "controlFlow.singleLineIfBraces": 1,
+      "controlFlow.guardClauses": 1,
+      "syntax.quotes": 0.6666666666666666,
+      "syntax.semicolons": 0.75,
+      "syntax.trailingCommas": 0,
+      "syntax.variableDeclarationCommaPlacement": 0,
+      "syntax.yodaConditions": 1,
+      "syntax.multilineTernaryOperatorPlacement": 0,
+      "syntax.lineWidth": 0.65,
+      "whitespace.indentationKind": 0.6428571428571429,
+      "whitespace.indentationSize": 0.6428571428571429,
+      "whitespace.switchCaseIndentation": 0,
+      "whitespace.switchCaseBreakIndentation": 0,
+      "whitespace.memberExpressionIndentation": 0,
+      "whitespace.multilineCallArgumentLayout": 0,
+      "whitespace.blankLineDensity": 0.9771428571428571,
+      "whitespace.blankLineBeforeReturn": 1,
+      "whitespace.blankLineBeforeIf": 1,
+      "imports.ordering": 1
+    }
+  },
+  "nonFixablePreferences": [
+    {
+      "rule": "naming.functionWordCountPreference",
+      "reason": "Renaming functions can break public APIs and call sites."
+    },
+    {
+      "rule": "naming.functionExpressionNamingPreference",
+      "reason": "Converting anonymous functions to named forms can alter stack traces and callback semantics."
+    },
+    {
+      "rule": "comments.preferJsdocForFunctions",
+      "reason": "Automatically generating JSDoc content is lossy without semantic context."
+    },
+    {
+      "rule": "controlFlow.guardClauses",
+      "reason": "Guard-clause refactors can alter readability and control flow intent."
+    },
+    {
+      "rule": "comments.commentBlockFraming",
+      "reason": "Comment framing style is context-sensitive and should be reviewed before enforcement."
+    },
+    {
+      "rule": "comments.trailingInlineCommentAlignment",
+      "reason": "Aligning trailing inline comments is layout-sensitive and can conflict with line-length constraints."
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "name": "cdo",
+  "version": "0.1.0",
+  "description": "Learn coding style from repositories and generate reusable style guides/configs.",
+  "type": "module",
+  "main": "./src/index.js",
+  "bin": {
+    "cdo": "src/cli.js"
+  },
+  "exports": {
+    ".": "./src/index.js",
+    "./schema/cdo-profile.v1.schema.json": "./schema/cdo-profile.v1.schema.json"
+  },
+  "files": [
+    "src",
+    "schema",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "npm run coverage && npm run typecheck && npm run validate:fixtures:strict",
+    "test:run": "node --test test/*.test.js",
+    "snapshots:test": "node --test test/snapshot.fixtures.test.js",
+    "snapshots:update": "node ./scripts/update-snapshots.js",
+    "coverage": "c8 --check-coverage --lines 90 --statements 90 --branches 70 npm run -s test:run",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "release:check": "npm pack --dry-run",
+    "release:smoke": "node ./scripts/release-smoke.js",
+    "publish:ready": "npm run test && npm run release:check && npm run release:smoke",
+    "prepublishOnly": "npm run publish:ready",
+    "fixtures:setup": "node ./scripts/setup-fixtures.js",
+    "validate:fixtures": "npm run fixtures:setup && node ./scripts/validate-fixtures.js",
+    "validate:fixtures:strict": "npm run validate:fixtures -- --max-changed-files 6 --max-changed-lines 80"
+  },
+  "keywords": [
+    "style",
+    "formatter",
+    "biome",
+    "mcp",
+    "ai"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3rd-Eden/cdo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/3rd-Eden/cdo/issues"
+  },
+  "homepage": "https://github.com/3rd-Eden/cdo#readme",
+  "author": "Arnout Kazemier",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@babel/parser": "^7.27.7",
+    "@babel/traverse": "^7.27.7",
+    "@biomejs/biome": "^2.3.14",
+    "@modelcontextprotocol/sdk": "^1.17.4",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "diff": "^8.0.3",
+    "minimist": "^1.2.8"
+  },
+  "devDependencies": {
+    "@types/minimist": "^1.2.5",
+    "@types/node": "^24.3.0",
+    "c8": "^10.1.3",
+    "typescript": "^5.9.2"
+  }
+}

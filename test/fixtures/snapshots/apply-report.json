@@ -1,0 +1,29 @@
+{
+  "engine": "biome",
+  "write": false,
+  "filesScanned": 3,
+  "filesChanged": 1,
+  "diffs": [
+    "Index: <repo>/src/outlier.js\n===================================================================\n--- <repo>/src/outlier.js\tbefore\n+++ <repo>/src/outlier.js\tafter(dry-run)\n@@ -1,7 +1,7 @@\n export function weird() {\n-\t//tight\n-\tif (true) {\n-\t\treturn \"ok\"\n-\t}\n-\treturn \"done\"\n+  //tight\n+  if (true) {\n+    return 'ok';\n+  }\n+  return 'done';\n }\n"
+  ],
+  "files": [
+    {
+      "file": "<repo>/src/outlier.js",
+      "changed": true,
+      "additions": 5,
+      "deletions": 5
+    },
+    {
+      "file": "<repo>/src/primary.js",
+      "changed": false,
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "file": "<repo>/src/secondary.ts",
+      "changed": false,
+      "additions": 0,
+      "deletions": 0
+    }
+  ]
+}

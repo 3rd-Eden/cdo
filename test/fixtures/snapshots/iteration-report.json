@@ -1,0 +1,83 @@
+{
+  "generatedAt": "<generated-at>",
+  "profileId": "<profile-id>",
+  "schemaVersion": "1.0.0",
+  "engine": "biome",
+  "confidence": {
+    "overall": 0.49984761904761904,
+    "byRule": {
+      "comments.lineCommentSpacing": 0.5,
+      "comments.preferJsdocForFunctions": 0,
+      "comments.commentBlockFraming": 1,
+      "comments.trailingInlineCommentAlignment": 0,
+      "naming.functionWordCountPreference": 0.6666666666666666,
+      "naming.functionExpressionNamingPreference": 0,
+      "controlFlow.singleLineIfBraces": 1,
+      "controlFlow.guardClauses": 1,
+      "syntax.quotes": 0.6666666666666666,
+      "syntax.semicolons": 0.75,
+      "syntax.trailingCommas": 0,
+      "syntax.variableDeclarationCommaPlacement": 0,
+      "syntax.yodaConditions": 1,
+      "syntax.multilineTernaryOperatorPlacement": 0,
+      "syntax.lineWidth": 0.65,
+      "whitespace.indentationKind": 0.6428571428571429,
+      "whitespace.indentationSize": 0.6428571428571429,
+      "whitespace.switchCaseIndentation": 0,
+      "whitespace.switchCaseBreakIndentation": 0,
+      "whitespace.memberExpressionIndentation": 0,
+      "whitespace.multilineCallArgumentLayout": 0,
+      "whitespace.blankLineDensity": 0.9771428571428571,
+      "whitespace.blankLineBeforeReturn": 1,
+      "whitespace.blankLineBeforeIf": 1,
+      "imports.ordering": 1
+    },
+    "deltaOverall": null,
+    "deltaByRule": {
+      "comments.lineCommentSpacing": 0.5,
+      "comments.preferJsdocForFunctions": 0,
+      "comments.commentBlockFraming": 1,
+      "comments.trailingInlineCommentAlignment": 0,
+      "naming.functionWordCountPreference": 0.6666666666666666,
+      "naming.functionExpressionNamingPreference": 0,
+      "controlFlow.singleLineIfBraces": 1,
+      "controlFlow.guardClauses": 1,
+      "syntax.quotes": 0.6666666666666666,
+      "syntax.semicolons": 0.75,
+      "syntax.trailingCommas": 0,
+      "syntax.variableDeclarationCommaPlacement": 0,
+      "syntax.yodaConditions": 1,
+      "syntax.multilineTernaryOperatorPlacement": 0,
+      "syntax.lineWidth": 0.65,
+      "whitespace.indentationKind": 0.6428571428571429,
+      "whitespace.indentationSize": 0.6428571428571429,
+      "whitespace.switchCaseIndentation": 0,
+      "whitespace.switchCaseBreakIndentation": 0,
+      "whitespace.memberExpressionIndentation": 0,
+      "whitespace.multilineCallArgumentLayout": 0,
+      "whitespace.blankLineDensity": 0.9771428571428571,
+      "whitespace.blankLineBeforeReturn": 1,
+      "whitespace.blankLineBeforeIf": 1,
+      "imports.ordering": 1
+    }
+  },
+  "diff": {
+    "filesScanned": 3,
+    "filesChanged": 1,
+    "additions": 5,
+    "deletions": 5,
+    "changedByRepo": {
+      "<repo>": 1
+    },
+    "topChangedCategories": [
+      {
+        "name": "indentation",
+        "count": 8
+      },
+      {
+        "name": "comments",
+        "count": 2
+      }
+    ]
+  }
+}
